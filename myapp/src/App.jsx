@@ -1,7 +1,9 @@
 import { useRef } from 'react';
+import Home from './components/Home';
 // import gsap from 'gsap';
 // import { useGSAP } from '@gsap/react';
 // gsap.registerPlugin(useGSAP);
+
 
 
 
@@ -20,8 +22,8 @@ function App() {
   return (
     <>
     <main className='w-screen h-screen bg-black text-white'>
+      <Home/>
       
-      <h1 className='text-white'>hello</h1>
     </main>
     </>
   );
