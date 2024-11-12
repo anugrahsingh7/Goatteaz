@@ -82,7 +82,7 @@ function Home() {
             
             <div ref={contentRef} className="absolute w-screen h-screen px-28 flex flex-col items-center justify-center">
                 <h1 ref={titleRef} className='text-8xl font-extrabold'>GOATEAZ</h1>
-                <h2 ref={subtitleRef} className='text-3xl text-center font-light'>
+                <h2 ref={subtitleRef} className='text-3xl text-center font-normal'>
                     Welcome to GoatTeaz—where history's most goated facts come alive! 
                     Dive into a world of mind-blowing stories, jaw-dropping discoveries, 
                     and timeless trivia that's anything but ordinary.
