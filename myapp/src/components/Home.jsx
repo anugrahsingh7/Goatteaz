@@ -88,10 +88,10 @@ function Home() {
                     and timeless trivia that's anything but ordinary.
                 </h2>
                 <div ref={buttonsRef} className='flex gap-5'>
-                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 font-extrabold hover:bg-cyan-400 active:text-black active:scale-90 transition-colors'>
+                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 font-extrabold hover:bg-cyan-400  active:scale-90 transition-colors'>
                         Explore Goated Facts
                     </button>
-                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 font-extrabold hover:bg-red-500 active:text-black active:scale-90 transition-colors'>
+                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 font-extrabold hover:bg-red-500  active:scale-90 transition-colors'>
                         Join Our Community
                     </button>
                 </div>

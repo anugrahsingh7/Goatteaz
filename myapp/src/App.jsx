@@ -1,7 +1,10 @@
 import { useRef, useEffect, useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { gsap } from 'gsap';
 import Home from './components/Home';
 import Loader from './components/Loader';
+import Footer from './components/Footer';
+import Blogs from './components/Blogs';
 
 function App() {
   const cursorRef = useRef(null);
@@ -72,7 +75,7 @@ function App() {
   };
 
   return (
-    <>
+    <BrowserRouter>
       {isLoading ? (
         <Loader onLoadingComplete={() => setIsLoading(false)} />
       ) : (
@@ -88,6 +91,7 @@ function App() {
             }}
           />
           <Home/>
+          <Blogs/>
           
           {/* Updated Modal with initial styles */}
           <div 
@@ -122,9 +126,10 @@ function App() {
               </button>
             </div>
           </div>
+          <Footer/>
         </main>
       )}
-    </>
+    </BrowserRouter>
   );
 }
 
