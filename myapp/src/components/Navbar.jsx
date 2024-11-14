@@ -17,15 +17,13 @@ function Navbar() {
     const navbarRef = useRef(null);
     
     const menuLinks = [
-       
-        { title: 'Home', path: '/' },
-        { title: 'Explore Facts', path: '/explore' },
-        { title: 'Blogs', path: '/blogs' },
-        { title: 'Community', path: '/community' },
-        { title: 'Contact Us', path: '/contact' },
-        
-        { title: 'About Us', path: '/about' },
-        ];
+        { title: 'HOME', path: '/' },
+        { title: 'EXPLORE FACTS', path: '/explore' },
+        { title: 'BLOGS', path: '/blogs' },
+        { title: 'COMMUNITY', path: '/community' },
+        { title: 'CONTACT US', path: '/contact' },
+        { title: 'ABOUT US', path: '/about' },
+    ];
 
     useEffect(() => {
         // Initial fade in animation for navbar
@@ -90,32 +88,18 @@ function Navbar() {
     return (
         <nav 
             ref={navbarRef}
-            className="w-full bg-transparent text-white p-4 fixed top-0 left-0 z-50 opacity-0" // Added opacity-0
+            className="w-full bg-transparent backdrop:blur-md text-white p-4 sticky top-0 left-0 z-50 opacity-0" // Changed to sticky
         >
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 {/* Logo */}
-               
-              
-                <div className="text-3xl font-extrabold flex items-center hover:text-red-500 cursor-pointer transition-colors">
-                    <img src="./src/assets/logowhite.png" alt="Goateaz" className="w-10 h-10" />
+                <div className="text-3xl font-extrabold flex items-center hover:text-red-500 cursor-pointer transition-colors text-shadow-xl">
+                    <img src="./src/assets/logowhite.png" alt="Goateaz" className="w-10 h-10 " />
                     Goateaz
-                    </div>
+                </div>
 
-                    
-                    {/* <div className="search-bar bg-red-500 bg-opacity-10 backdrop-blur-lg w-1/4 h-9 border-2 border-white rounded-3xl flex items-center px-3">
-                <input 
-                type="text" 
-                placeholder="Search..." 
-                value={query} 
-                onChange={(e) => setQuery(e.target.value)} 
-                className="search-input w-96 me-2 bg-transparent  text-white outline-none active:outline-none placeholder:text-white"
-                        />
-                          <button onClick={handleSearch} className="search-button hover:text-red-500">
-                <FaSearch />
-            </button>
-                        </div> */}
+                {/* Menu Button */}
                 <button 
-                    className="text-white text-3xl font-extrabold  focus:outline-none hover:text-cyan-400 transition-colors active:scale-90"
+                    className="text-white text-3xl font-extrabold focus:outline-none hover:text-cyan-400 transition-colors active:scale-90 text-shadow-xl"
                     onClick={() => setIsMenuOpen(true)}
                 >
                     Menu
