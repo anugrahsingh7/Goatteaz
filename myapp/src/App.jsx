@@ -5,6 +5,11 @@ import Home from './components/Home';
 import Loader from './components/Loader';
 import Footer from './components/Footer';
 import Blogs from './components/Blogs';
+import About from './components/About';
+import Contact from './components/Contact'
+
+
+
 
 function App() {
   const cursorRef = useRef(null);
@@ -91,12 +96,19 @@ function App() {
             }}
           />
           <Home/>
+          <About/>
           <Blogs/>
+          
+          <Contact/>
+
+          
+          
+          
           
           {/* Updated Modal with initial styles */}
           <div 
             ref={modalRef}
-            className="fixed bottom-4 right-4 bg-zinc-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-2xl max-w-sm shadow-lg"
+            className="fixed bottom-4 z-[9997] right-4 bg-zinc-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-2xl max-w-sm shadow-lg"
             style={{ 
               opacity: 0,  // Start hidden
               visibility: isModalOpen ? 'visible' : 'hidden',  // Manage visibility

@@ -82,17 +82,27 @@ function Home() {
             <Navbar/>
 
             <div ref={contentRef} className="absolute w-screen h-screen px-28 flex flex-col items-center justify-center pt-20">
-                <h1 ref={titleRef} className='text-8xl font-extrabold text-shadow-xl'>GOATEAZ</h1>
-                <h2 ref={subtitleRef} className='text-3xl text-center font-normal text-shadow-xl'>
+                
+                <h1 ref={titleRef} className='text-8xl font-extrabold text-shadow-xl'>
+                <span className='text-[#4acce7]'>G</span>
+                    <span className='text-[#ef37a6]'>O</span>
+                    <span className='text-[#e3ff5a]'>A</span>
+                    <span className='text-[#9c5bd0]'>T</span>
+                    <span className='text-[#ea89b7]'>E</span>
+                    <span className='text-[#f3dc91]'>A</span>
+                    <span className='text-[#9c5bd0]'>Z</span>
+
+                </h1>
+                <h2 ref={subtitleRef} className='text-3xl text-center font-normal text-shadow-xl opacity-30'>
                     Welcome to GoatTeaz—where history's most goated facts come alive! 
                     Dive into a world of mind-blowing stories, jaw-dropping discoveries, 
                     and timeless trivia that's anything but ordinary.
                 </h2>
                 <div ref={buttonsRef} className='flex gap-5'>
-                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 shadow-2xl font-extrabold hover:bg-cyan-400  active:scale-90 transition-colors '>
+                    <button className=' border-2 border-[#e3ff5a] bg-transparent backdrop-blur-3xl text-[#e3ff5a] px-10 py-2 rounded-full mt-5 shadow-3xl font-extrabold hover:bg-[#ef37a6]  active:scale-95 transition-colors '>
                         Explore Goated Facts
                     </button>
-                    <button className='bg-transparent border-2 border-white text-white px-10 py-2 rounded-full mt-5 shadow-2xl font-extrabold hover:bg-red-500  active:scale-90 transition-colors'>
+                    <button className='border-2 border-[#e3ff5a] bg-transparent backdrop-blur-3xl text-[#e3ff5a] px-10 py-2 rounded-full mt-5 shadow-3xl font-extrabold hover:bg-[#ef37a6]  active:scale-95 transition-colors '>
                         Join Our Community
                     </button>
                 </div>
