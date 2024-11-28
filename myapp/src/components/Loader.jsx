@@ -23,7 +23,7 @@ const Loader = ({ onLoadingComplete }) => {
 
     tl.to(textRef.current, {
       duration: 3,
-      text: "Goateaz is created with passion and creativity!",
+      text: "Goatteaz is created with passion and creativity!",
       ease: "none",
     });
 

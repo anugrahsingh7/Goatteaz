@@ -93,11 +93,12 @@ function Navbar() {
             <div className="max-w-7xl mx-auto flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-3xl font-extrabold flex items-center hover:text-red-500 cursor-pointer transition-colors text-shadow-md">
-                    <img src="./src/assets/logowhite.png" alt="Goateaz" className="w-10 h-10 " />
+                    <img src="https://i.postimg.cc/mZQwpftF/logowhite.png" alt="Goateaz" className="w-10 h-10 " />
                     <span className='text-[#e3ff5a]'>G</span>
                     <span className='text-[#ef37a6]'>O</span>
                     <span className='text-[#56d6d6]'>A</span>
                     <span className='text-[#9c5bd0]'>T</span>
+                    <span className='text-[#ef37a6]'>T</span>
                     <span className='text-[#ea89b7]'>E</span>
                     <span className='text-[#f3dc91]'>A</span>
                     <span className='text-[#e3ff5a]'>Z</span>
@@ -118,7 +119,7 @@ function Navbar() {
             {/* Updated Menu Links with perspective */}
             <div 
                 ref={menuRef}
-                className="fixed top-0 left-0 w-full h-screen bg-gradient-to-br from-pink-500 via-purple-500 to-blue-500 translate-y-[-100%] z-[9998] flex items-center justify-center perspective-[1000px]"
+                className="fixed top-0 left-0 w-full h-screen bg-red-600 translate-y-[-100%] z-[9998] flex items-center justify-center perspective-[1000px]"
             >
                 {/* Close Button */}
                 <button 

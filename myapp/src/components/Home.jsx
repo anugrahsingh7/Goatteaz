@@ -73,7 +73,7 @@ function Home() {
             <video 
                 ref={videoRef}
                 className='absolute top-0 left-0 w-full h-full object-cover opacity-0' 
-                src='./src/assets/home.mov' 
+                src='./src/assets/movies/home.mov' 
                 autoPlay 
                 loop 
                 muted
@@ -88,6 +88,7 @@ function Home() {
                     <span className='text-[#ef37a6]'>O</span>
                     <span className='text-[#e3ff5a]'>A</span>
                     <span className='text-[#9c5bd0]'>T</span>
+                    <span className='text-[#ef37a6]'>T</span>
                     <span className='text-[#ea89b7]'>E</span>
                     <span className='text-[#f3dc91]'>A</span>
                     <span className='text-[#9c5bd0]'>Z</span>
