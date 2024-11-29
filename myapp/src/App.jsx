@@ -2,11 +2,14 @@ import { useRef, useEffect, useState } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { gsap } from 'gsap';
 import Home from './components/Home';
+
 import Loader from './components/Loader';
 import Footer from './components/Footer';
 import Blogs from './components/Blogs';
 import About from './components/About';
-import Contact from './components/Contact'
+import Contact from './components/Contact';
+import ExploreFacts from './components/ExploreFacts';
+
 
 
 
@@ -96,6 +99,7 @@ function App() {
             }}
           />
           <Home/>
+          <ExploreFacts/>
           <About/>
           <Blogs/>
           
