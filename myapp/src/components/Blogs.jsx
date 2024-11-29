@@ -314,8 +314,8 @@ So here’s to the flops that dared big and lost bigger! Because in Bollywood, e
       {/* Modal */}
       {isModalOpen && modalContent && (
   <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-90 flex justify-center items-center z-50 " >
-    <div className="bg-black border-2 border-red-500 border-opacity-30 w-3/4 sm:w-2/3 md:w-1/2 lg:w-1/3 rounded-2xl p-6 max-h-[80%] overflow-auto">
-      <div className="text-red-500 text-3xl font-bold font-mono text-right " onClick={closeModal}>x</div>
+    <div className="bg-black border-2 border-red-500 border-opacity-30 w-1/4 sm:w-4/4 md:w-3/4 lg:w-2/4 rounded-2xl p-6 max-h-[80%] overflow-auto">
+      <div className="text-red-500 text-3xl font-bold font-mono text-right cursor-pointer" onClick={closeModal}>x</div>
       <h2 className="text-3xl text-[#e3fe59] font-bold mb-4">{modalContent.title}</h2>
       <p className="text-white opacity-75 text-xl mb-4 font-medium">{modalContent.description}</p>
       <div className="text-gray-300 opacity-60 text-md leading-6">
