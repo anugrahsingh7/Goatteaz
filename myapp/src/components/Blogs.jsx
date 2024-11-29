@@ -15,7 +15,7 @@ function BlogsHeading() {
     const fetchBlogs = async () => {
       const blogData = [
         {
-          id: 1,
+          
           title:
             "Did Leo Really Have to Eat Bear Flesh to Win an Oscar? Not Exactly… But It Sure Helped!",
           description:
@@ -35,7 +35,7 @@ So, did eating bison flesh singlehandedly win him the Oscar? Probably not. But i
 `,
         },
         {
-          id: 2,
+          
           title: "The “Goated” Origin Story of Nickelodeon: How a 5-Cent Fee Became Every Kid’s Dream Channel",
           description: `Here at GOATTEAZ, we’re all about serving up the hottest tea on your favorite shows, movies, and channels – and today, we’re spilling some seriously retro tea on Nickelodeon! Get ready to laugh, gasp, and maybe shed a nostalgic tear as we dive into how a humble 5-cent movie ticket paved the way for one of the most “goated” kids' channels in history.
 
@@ -59,7 +59,7 @@ So next time you’re feeling nostalgic, just remember: Nickelodeon started as a
 `,
         },
         {
-          id: 3,
+          
           title: "Why Wait for a Fortune Teller When You Can Be Christopher Nolan?",
           description: `“You think you need this guy to predict the future?” (Cue: iconic fortune-teller parrot). Well, not if you wake up as Christopher Nolan! That’s right – today’s “goated” tea from GOATTEAZ is all about the guy who doesn’t need a parrot to predict the future. In fact, he practically invented his own with some math, a camera, and mind-bending movies.
 `,
@@ -76,7 +76,7 @@ So, next time someone tells you “maths isn’t useful,” remind them of Chris
 `,
         },
         {
-          id: 4,
+          
           title: "How Discipline Turned Akshay Kumar from “Flop Actor” to Bollywood’s Ultimate Khiladi",
           description:
             `Think it takes only blockbuster hits to make a Bollywood legend? Think again! Today’s “goated” tea is all about how Akshay Kumar bounced back from the brink of career disaster and proved that discipline can be the ultimate comeback weapon.`,
@@ -94,7 +94,7 @@ So, next time you’re feeling down about a few setbacks, take a page from Aksha
         },
 
         {
-          id:5,
+          
           title:"Bollywood’s “GOATed” Flops: When Big Budgets Meet Tiny Box Office Returns",
           description:`Imagine this: you spend a whopping 35 crores on a movie, only to rake in… 60,000 rupees. Impossible? Nope, welcome to the world of Bollywood’s GOATed flops! Today, we’re talking about some recent big-budget movies that, despite famous stars and grand ambitions, crashed and burned at the box office. At the top of our list? Arjun Kapoor’s The Lady Killer, which made headlines (but not profits) with an almost unbelievable 60K return.
 `,
