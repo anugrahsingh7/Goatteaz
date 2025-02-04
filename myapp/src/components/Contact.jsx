@@ -57,7 +57,7 @@ function Contact() {
     {
       question: "How do I submit a fact?",
       answer:
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ad voluptas ullam eveniet delectus reiciendis aliquid aperiam, ipsum numquam sapiente. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus, veritatis!",
+        "",
     },
     {
       question: "How can I join the community?",
@@ -72,7 +72,7 @@ function Contact() {
   ];
 
   return (
-    <div className="w-full h-full bg-black flex flex-col justify-center p-0 pt-4">
+    <div className="w-full h-full bg-black flex flex-col justify-center p-0 pt-4" id="contact">
       {/* FAQ Section */}
       <div className="h-2/3 w-full p-3">
         <div className="h-1/4 w-full flex flex-col justify-center items-center">

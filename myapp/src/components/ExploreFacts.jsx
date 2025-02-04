@@ -21,7 +21,8 @@ function ExploreFacts() {
   };
 
   return (
-    <div className="flex flex-col w-full h-full justify-center items-center border-y-2 border-white border-opacity-30">
+    <div className="flex flex-col w-full h-full justify-center items-center border-y-2 border-white border-opacity-30"
+    id="popular">
       <div className="w-full h-1/6 text-[#e3fe59] text-6xl font-medium bg-transparent flex items-center justify-start py-7 px-8">
         Popular Categories
       </div>
@@ -116,7 +117,7 @@ function ExploreFacts() {
                 <div className="p-6 w-full h-full rounded-full bg-black">
                     <div className=" w-full h-full rounded-full">
                         <img className="w-full h-full rounded-full object-cover rotate-img" 
-                        src="https://cdn1.parksmedia.wdprapps.disney.com/media/espnwwos/home/WWoS_Hero_768x438_Multi.jpg" alt="acient" /></div></div></div>
+                        src="https://cdn.britannica.com/15/255215-050-8262C902/Rapinoe-Polkinghorne-US-Australia-soccer-football-2020-Tokyo-Olympics.jpg" alt="acient" /></div></div></div>
             
             <div className="w-full h-1/2  flex flex-col p-2">
             <h1 className="text-[#e3fe59] font-bold text-2xl">4. “You Can’t Make This Up” Sports</h1>

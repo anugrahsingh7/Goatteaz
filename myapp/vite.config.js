@@ -9,7 +9,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         assetFileNames: 'assets/images .[hash][extname]',
-        assetFileNames: 'assets/movies .[hash][extname]', // Customize output file structure
+        // Customize output file structure
       },
     },
   },

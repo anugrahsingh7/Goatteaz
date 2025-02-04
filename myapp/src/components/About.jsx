@@ -1,6 +1,7 @@
 function About() {
     return (
-        <div className="bg-[radial-gradient(circle_at_50%_120%,rgba(239,68,68,0.05),rgba(34,211,238,0.1),rgba(0,0,0,0))] flex  h-full w-full p-5">
+        <div className="bg-[radial-gradient(circle_at_50%_120%,rgba(239,68,68,0.05),rgba(34,211,238,0.1),rgba(0,0,0,0))] flex  h-full w-full p-5"
+        id="about">
           
           <div className="h-full w-1/2 bg-transparent p-28 "><div class="bg-transparent h-full w-full p-1 rounded-[2%] bg-gradient-animated bg-[length:200%_200%] animate-gradient-move ">
             <img src="https://i.postimg.cc/CKBCj935/arjun.jpg" alt="founder photo" class="h-full w-full object-cover rounded-[2%] "/>
