@@ -1,18 +1,19 @@
-import { useRef, useEffect, useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { gsap } from 'gsap';
-import Home from './components/Home';
-import Loader from './components/Loader';
-import Footer from './components/Footer';
-import Blogs from './components/Blogs';
-import About from './components/About';
-import Contact from './components/Contact';
-import ExploreFacts from './components/ExploreFacts';
-import GoatteazShorts from './components/GoatteazShorts';
-import Signin from './components/Signin';
-import Login from './components/Login';
-import Resetpassword from './components/Resetpassword';
-import BlogForm from './components/BlogForm';
+import { useRef, useEffect, useState } from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { gsap } from "gsap";
+import Home from "./components/Home";
+import Loader from "./components/Loader";
+import Footer from "./components/Footer";
+import Blogs from "./components/Blogs";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import ExploreFacts from "./components/ExploreFacts";
+import GoatteazShorts from "./components/GoatteazShorts";
+import Signin from "./components/Signin";
+import Login from "./components/Login";
+import Resetpassword from "./components/Resetpassword";
+import BlogForm from "./components/BlogForm";
+import VideoManager from "./components/VideoManager";
 
 function App() {
   const cursorRef = useRef(null);
@@ -39,13 +40,14 @@ function App() {
       const modalTimer = setTimeout(() => {
         if (modalRef.current) {
           setIsModalOpen(true);
-          
-          gsap.fromTo(modalRef.current,
+
+          gsap.fromTo(
+            modalRef.current,
             {
               opacity: 0,
               y: 100,
               scale: 0.8,
-              rotateX: -45
+              rotateX: -45,
             },
             {
               opacity: 1,
@@ -54,7 +56,7 @@ function App() {
               rotateX: 0,
               duration: 1.2,
               ease: "elastic.out(1, 0.8)",
-              visibility: 'visible'
+              visibility: "visible",
             }
           );
         }
@@ -78,7 +80,7 @@ function App() {
       rotateX: -30,
       duration: 0.4,
       ease: "power2.inOut",
-      onComplete: () => setIsModalOpen(false)
+      onComplete: () => setIsModalOpen(false),
     });
   };
 
@@ -87,68 +89,73 @@ function App() {
       <Routes>
         {/* Signin route */}
         <Route path="/signin" element={<Signin />} />
-        
-        {/* Default route ("/") for main content */}
-        <Route path="/" element={
-          isLoading ? (
-            <Loader onLoadingComplete={() => setIsLoading(false)} />
-          ) : (
-            <main className='w-screen h-screen bg-black text-white'>
-              <div 
-                ref={cursorRef}
-                className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-[9999]"
-                style={{ 
-                  left: 0,
-                  top: 0,
-                  transform: 'translate(-50%, -50%)',
-                  transition: 'left 0.2s ease-out, top 0.2s ease-out'
-                }}
-              />
-              <Home />
-              <ExploreFacts />
-              <GoatteazShorts />
-              <About />
-              <Blogs />
-              <BlogForm />
-              <Contact />
-              <Footer />
 
-              {/* Modal */}
-              <div 
-                ref={modalRef}
-                className="fixed bottom-4 z-[9997] right-4 bg-zinc-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-2xl max-w-sm shadow-lg"
-                style={{ 
-                  opacity: 0,  // Start hidden
-                  visibility: isModalOpen ? 'visible' : 'hidden',  // Manage visibility
-                  pointerEvents: isModalOpen ? 'auto' : 'none'    // Disable interactions when hidden
-                }}
-              >
-                <p className="text-md mb-4 leading-relaxed">
-                  Join over 25,000 fact fanatics who explore the world's most goated facts every day! 
-                  From ancient mysteries to modern marvels, GoatTeaz has uncovered 10,000+ mind-blowing 
-                  truths so far—and we're just getting started!
-                </p>
-                <div className="flex justify-between items-center">
-                  <button 
-                    onClick={() => {
-                      closeModal();
-                      href = "/"; // Replace with your actual link
-                    }}
-                    className="bg-cyan-400 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white active:scale-95 transition-colors"
-                  >
-                    Join Now
-                  </button>
-                  <button 
-                    onClick={closeModal}
-                    className="text-red-500 px-4 py-2 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors"
-                  >
-                    Close
-                  </button>
+        {/* Default route ("/") for main content */}
+        <Route
+          path="/"
+          element={
+            isLoading ? (
+              <Loader onLoadingComplete={() => setIsLoading(false)} />
+            ) : (
+              <main className="w-screen h-screen bg-black text-white">
+                <div
+                  ref={cursorRef}
+                  className="fixed w-5 h-5 bg-white rounded-full pointer-events-none mix-blend-difference z-[9999]"
+                  style={{
+                    left: 0,
+                    top: 0,
+                    transform: "translate(-50%, -50%)",
+                    transition: "left 0.2s ease-out, top 0.2s ease-out",
+                  }}
+                />
+                <Home />
+                <ExploreFacts />
+                <GoatteazShorts />
+                <VideoManager />
+                <About />
+                <Blogs />
+                <BlogForm />
+                <Contact />
+                <Footer />
+
+                {/* Modal */}
+                <div
+                  ref={modalRef}
+                  className="fixed bottom-4 z-[9997] right-4 bg-zinc-900 bg-opacity-70 backdrop-blur-lg p-6 rounded-2xl max-w-sm shadow-lg"
+                  style={{
+                    opacity: 0, // Start hidden
+                    visibility: isModalOpen ? "visible" : "hidden", // Manage visibility
+                    pointerEvents: isModalOpen ? "auto" : "none", // Disable interactions when hidden
+                  }}
+                >
+                  <p className="text-md mb-4 leading-relaxed">
+                    Join over 25,000 fact fanatics who explore the world's most
+                    goated facts every day! From ancient mysteries to modern
+                    marvels, GoatTeaz has uncovered 10,000+ mind-blowing truths
+                    so far—and we're just getting started!
+                  </p>
+                  <div className="flex justify-between items-center">
+                    <button
+                      onClick={() => {
+                        closeModal();
+                        href = "/"; // Replace with your actual link
+                      }}
+                      className="bg-cyan-400 text-black px-4 py-2 rounded-lg text-sm font-semibold hover:bg-white active:scale-95 transition-colors"
+                    >
+                      Join Now
+                    </button>
+                    <button
+                      onClick={closeModal}
+                      className="text-red-500 px-4 py-2 rounded-lg text-lg font-semibold hover:bg-white/10 transition-colors"
+                    >
+                      Close
+                    </button>
+                  </div>
                 </div>
-              </div>
-            </main>
-          )
-        } />
+              </main>
+            )
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

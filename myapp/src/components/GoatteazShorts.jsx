@@ -12,38 +12,84 @@ function GoatteazShorts() {
   const [isFullDescription, setIsFullDescription] = useState(false);
 
   const videoRef = useRef(null);
-
-  const shorts = [
-    { 
+  // In GoatteazShorts component
+  const [shorts, setShorts] = useState([
+    {
       id: 1,
-       videoUrl: "/src/assets/movies/short1.mp4", 
-       description: `goatteaz Ever wondered what it takes to win an Oscar? Leonardo DiCaprio went all out, even eating raw bison liver in The Revenant, to finally take home his first Academy Award after six nominations!
-If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow button and join us at GoatedTea for more!`
-       },
-    { 
-      id: 2, 
-      videoUrl: "/src/assets/movies/short2.mp4", 
-      description: `goatteaz Did you know Nickelodeon got its name from a *nickel*? $ Back in the day, a "nickelodeon" was an indoor theater where you could watch movies for just 5 cents! l Originally called *Pinwheel*, the channel rebranded to *Nickelodeon* in 1979, evolving with iconic animated series and live-action hits ever since. Talk about being "goated" in every kid's childhood memories! `
-     },
-    { 
-      id: 3, 
-      videoUrl: "/src/assets/movies/short3.mp4", 
+      videoUrl: "/src/assets/movies/short1.mp4",
+      description: `goatteaz Ever wondered what it takes to win an Oscar? Leonardo DiCaprio went all out, even eating raw bison liver in The Revenant, to finally take home his first Academy Award after six nominations!
+If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow button and join us at GoatedTea for more!`,
+    },
+    {
+      id: 2,
+      videoUrl: "/src/assets/movies/short2.mp4",
+      description: `goatteaz Did you know Nickelodeon got its name from a *nickel*? $ Back in the day, a "nickelodeon" was an indoor theater where you could watch movies for just 5 cents! l Originally called *Pinwheel*, the channel rebranded to *Nickelodeon* in 1979, evolving with iconic animated series and live-action hits ever since. Talk about being "goated" in every kid's childhood memories! `,
+    },
+    {
+      id: 3,
+      videoUrl: "/src/assets/movies/short3.mp4",
       description: `goatteaz "Forget the parrot, you don't need predictions when you're Christopher Nolan
-* The mastermind behind Memento and The Dark Knight doesn't just make movies-he bends reality with math. • His depiction of black holes in Interstellar was so accurate, scientists used it as a reference for the first black hole image in 2019! Nolan's secret? It's all about the numbers.` 
+* The mastermind behind Memento and The Dark Knight doesn't just make movies-he bends reality with math. • His depiction of black holes in Interstellar was so accurate, scientists used it as a reference for the first black hole image in 2019! Nolan's secret? It's all about the numbers.`,
     },
-    { 
-      id: 4, 
-      videoUrl: "/src/assets/movies/short4.mp4", 
-      description: `goatteaz "From flop to top! Akshay Kumar's comeback story is proof that discipline and dedication can turn your career around. * He went from 14 consecutive flops to becoming the Khiladi of Bollywood! • Stay disciplined, stay tocused, and watch success follow.` 
+    {
+      id: 4,
+      videoUrl: "/src/assets/movies/short4.mp4",
+      description: `goatteaz "From flop to top! Akshay Kumar's comeback story is proof that discipline and dedication can turn your career around. * He went from 14 consecutive flops to becoming the Khiladi of Bollywood! • Stay disciplined, stay tocused, and watch success follow.`,
     },
-    { 
-      id: 5, 
-      videoUrl: "/src/assets/movies/short5.mp4", 
-      description: `goatteaz "When big budgets meet tiny box office numbers Bollywood's GOATed flops remind us that fame isn't always enough to win over audiences! Will they ever make a comeback? `
+    {
+      id: 5,
+      videoUrl: "/src/assets/movies/short5.mp4",
+      description: `goatteaz "When big budgets meet tiny box office numbers Bollywood's GOATed flops remind us that fame isn't always enough to win over audiences! Will they ever make a comeback? `,
     },
-  ];
+  ]);
 
-  const slicedDescription = shorts[currentShortIndex].description.split(" ").slice(0, 5).join(" ");
+  useEffect(() => {
+    const fetchShorts = async () => {
+      try {
+        const response = await fetch("http://127.0.0.1:3000/api/videos");
+        const data = await response.json();
+        setShorts(data);
+        setCurrentShortIndex(data.length - 1); // Maintain initial index logic
+      } catch (error) {
+        console.error("Error fetching shorts:", error);
+      }
+    };
+    fetchShorts();
+  }, []);
+  // const shorts = [
+  //   {
+  //     id: 1,
+  //     videoUrl: "/src/assets/movies/short1.mp4",
+  //     description: `goatteaz Ever wondered what it takes to win an Oscar? Leonardo DiCaprio went all out, even eating raw bison liver in The Revenant, to finally take home his first Academy Award after six nominations!
+  // If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow button and join us at GoatedTea for more!`,
+  //   },
+  //   {
+  //     id: 2,
+  //     videoUrl: "/src/assets/movies/short2.mp4",
+  //     description: `goatteaz Did you know Nickelodeon got its name from a *nickel*? $ Back in the day, a "nickelodeon" was an indoor theater where you could watch movies for just 5 cents! l Originally called *Pinwheel*, the channel rebranded to *Nickelodeon* in 1979, evolving with iconic animated series and live-action hits ever since. Talk about being "goated" in every kid's childhood memories! `,
+  //   },
+  //   {
+  //     id: 3,
+  //     videoUrl: "/src/assets/movies/short3.mp4",
+  //     description: `goatteaz "Forget the parrot, you don't need predictions when you're Christopher Nolan
+  // * The mastermind behind Memento and The Dark Knight doesn't just make movies-he bends reality with math. • His depiction of black holes in Interstellar was so accurate, scientists used it as a reference for the first black hole image in 2019! Nolan's secret? It's all about the numbers.`,
+  //   },
+  //   {
+  //     id: 4,
+  //     videoUrl: "/src/assets/movies/short4.mp4",
+  //     description: `goatteaz "From flop to top! Akshay Kumar's comeback story is proof that discipline and dedication can turn your career around. * He went from 14 consecutive flops to becoming the Khiladi of Bollywood! • Stay disciplined, stay tocused, and watch success follow.`,
+  //   },
+  //   {
+  //     id: 5,
+  //     videoUrl: "/src/assets/movies/short5.mp4",
+  //     description: `goatteaz "When big budgets meet tiny box office numbers Bollywood's GOATed flops remind us that fame isn't always enough to win over audiences! Will they ever make a comeback? `,
+  //   },
+  // ];
+
+  const slicedDescription = shorts[currentShortIndex].description
+    .split(" ")
+    .slice(0, 5)
+    .join(" ");
   const fullDescription = shorts[currentShortIndex].description;
 
   const toggleDescription = () => setIsFullDescription((prev) => !prev);
@@ -57,7 +103,8 @@ If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow
   useEffect(() => {
     const video = videoRef.current;
     const updateProgress = () => {
-      if (!isDragging && video) setProgress((video.currentTime / video.duration) * 100);
+      if (!isDragging && video)
+        setProgress((video.currentTime / video.duration) * 100);
     };
     if (video) video.addEventListener("timeupdate", updateProgress);
     return () => video?.removeEventListener("timeupdate", updateProgress);
@@ -85,8 +132,7 @@ If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow
   const togglePlayPause = () => setIsPlaying((prev) => !prev);
 
   return (
-    <div className="h-[100vh]"
-    id="shorts">
+    <div className="h-[100vh]" id="shorts">
       <div className="h-[10vh] flex justify-center items-center mt-8">
         <h1 className="text-7xl font-bold text-white text-center">
           <span className="text-[#4acce7]">G</span>
@@ -140,7 +186,11 @@ If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow
 
           {/* Description */}
           <div className="absolute bottom-1 w-full p-0">
-            <p className={`text-gray-100 text-sm font-semibold transition-all duration-300 p-2 ${isFullDescription ? 'bg-black bg-opacity-70' : ''}`}>
+            <p
+              className={`text-gray-100 text-sm font-semibold transition-all duration-300 p-2 ${
+                isFullDescription ? "bg-black bg-opacity-70" : ""
+              }`}
+            >
               {isFullDescription ? fullDescription : slicedDescription}...
               <button
                 onClick={toggleDescription}
@@ -153,7 +203,10 @@ If you're into jaw-dropping facts and behind-the-scenes stories, hit that follow
 
           {/* Progress Bar */}
           <div className="absolute bottom-[0.01rem] w-full left-0 right-0 bg-gray-700 h-[0.3rem] cursor-pointer">
-            <div className="bg-red-500 h-[0.3rem]" style={{ width: `${progress}%` }}></div>
+            <div
+              className="bg-red-500 h-[0.3rem]"
+              style={{ width: `${progress}%` }}
+            ></div>
           </div>
         </div>
 
